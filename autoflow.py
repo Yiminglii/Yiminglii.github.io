@@ -4,7 +4,7 @@ from typing import Any
 
 ori_path='nietzsche'
 ori_names=os.listdir(ori_path)
-tar_path='docsify/sources'
+tar_path='docs/sources'
 
 class Readme:
     def __init__(self) -> None:
