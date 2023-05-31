@@ -4,13 +4,13 @@ from typing import Any
 
 ori_path='nietzsche'
 ori_names=os.listdir(ori_path)
-tar_path='docs/sources'
+tar_path='docs/sources/Nietzsche'
 
 class Readme:
     def __init__(self) -> None:
-        self.f=open('./docsify/readme.md',mode='w')
+        self.f=open('./docs/readme.md',mode='w')
         self.f.write('# 目录\n\n')
-    def __call__(self, line,*args: Any, **kwds: Any) -> Any:
+    def __call__(self, line):
         self.f.write(line)
     def __del__(self):
         print('file close')
@@ -19,7 +19,7 @@ class Readme:
 def logging(name:str):
     # print('processing: ',name)
     text={'name':name.split('.')[0],'md':os.path.join(name.split('.')[0]+'.md')}
-    string='* [{name}](sources/{md})'.format(**text)
+    string='* [{name}](sources/Nietzsche/{md})'.format(**text)
     print(string)
     return string+"\n\n"
 
@@ -27,7 +27,6 @@ def process(line:str=None):
     annotation=[chr(i+9312) for i in range(20)]
     if (re.match(pattern='第.*章|第.*卷',string=line) is not None) or \
         (re.match(pattern='§',string=line)is not None):
-        # (re.match(pattern='第')):
         line = '# '+line+ '***'
     elif line[0] in annotation:
         line='<font size=2>'+line+"</font>"
