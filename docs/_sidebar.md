@@ -1,6 +1,6 @@
 
 - Nietzsche
-  - [历史的用途与滥用](Nietzsche/历史的用途与滥用.md)
+  - [历史的用途与滥用](历史的用途与滥用.md)
   - [反基督](Nietzsche/反基督.md)
   - [善与恶的彼岸](Nietzsche/善与恶的彼岸.md)
   - [希腊悲剧时代的哲学](Nietzsche/希腊悲剧时代的哲学.md)
